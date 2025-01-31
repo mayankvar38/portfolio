@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kaushan Script', sans-serif; /* Set default font */
+    height: 100vh;
+    font-size: 20px;
+    overflow: hidden;
+}
+h1 {
+    font-family: 'Kaushan Script', cursive; /* Apply Kaushan Script font specifically to h1 */
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.makeagif.com/media/9-25-2023/ADlWrU.gif');
+    background-size: cover;
+    filter: blur(8px); /* Add blur effect */
+    z-index: -1;
+}
+
+.navbar {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 182, 193, 0.5); /* Pink color with transparency */
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow: hidden; /* Ensures the reflection doesn't spill */
+}
+
+.navbar::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: rgba(255, 182, 193, 0.2); /* Slightly more transparent pink for reflection */
+    transform: scaleY(-1); /* Flips the reflection vertically */
+    opacity: 0.5; /* Controls how prominent the reflection is */
+    filter: blur(8px); /* Smoothens the reflection */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Increased gap between items */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: whitesmoke; /* Change text color to contrast with the navbar */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: grey; /* Change hover color to grey */
+}
+
+.home-section {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+    color: white; /* Set text color to white */
+    text-align: center; /* Center text */
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px; /* Add some space above the buttons */
+}
+
+.social-button {
+    text-decoration: none; /* Remove underline from text */
+    color: white; /* Set text color to white */
+}
+
+.linkedin-button {
+    width: 30px; /* Set width for the LinkedIn button */
+    height: 30px; /* Set height for the LinkedIn button */
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensure the image covers the button area */
+}   
+.resume-button {
+    position: fixed; /* Fixed position to stay at the bottom left */
+    bottom: 20px; /* Distance from the bottom */
+    left: 20px; /* Distance from the left */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    text-decoration: none; /* Remove underline from text */
+    color: white; /* Set text color to white */
+    background-color: transparent; /* Make background transparent */
+}
+
+.resume-image {
+    width: 50px; /* Set width for the resume button image */
+    height: 50px; /* Set height for the resume button image */
+    border-radius: 50%; /* Make it circular */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.resume-text {
+    font-size: 16px; /* Set font size for the text */
+    font-weight: bold; /* Make text bold */
+}
+
+.name-heading {
+    font-size: 84px; /* Increase the font size as desired */
+    margin: 10px ; /* Optional: add some margin for spacing */
+}
+
+.profile-photo {
+    width: 150px; /* Set the width of the profile photo */
+    height: 150px; /* Set the height of the profile photo */
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensure the image covers the circular area */
+    margin-bottom: 20px; /* Space between the image and the name */
+}
