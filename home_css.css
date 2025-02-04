@@ -31,7 +31,7 @@ h1 {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(255, 182, 193, 0.5); /* Pink color with transparency */
+    background-color: rgba(147, 58, 138, 0.5); /* Pintro-textk color with transparency */
     border-radius: 10px;
     padding: 15px 25px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
