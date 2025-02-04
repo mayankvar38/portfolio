@@ -10,6 +10,9 @@ body {
     font-size: 20px;
     overflow: hidden;
 }
+h1 {
+    font-family: 'Kaushan Script', cursive; /* Apply Kaushan Script font specifically to h1 */
+}
 
 .background {
     position: fixed;
