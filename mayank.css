@@ -1214,5 +1214,5 @@ h2 {
   transition: all 0.5s;
 }
 .cp:hover:after {
-  content: "Click To See Profile";
+  content: "Click To See My Profile";
 }
