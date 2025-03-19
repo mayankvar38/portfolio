@@ -1239,30 +1239,3 @@ h2 {
 .cp:hover:after {
   content: "Click To See My Profile";
 }
-/* Competitive Programming Section */
-.cp-container {
-  display: flex; /* Use flexbox to align items in a row */
-  justify-content: center; /* Center the items horizontally */
-  gap: 20px; /* Add some space between the competitive programming divs */
-  margin: 20px 0; /* Add margin for spacing */
-}
-
-.cp {
-  position: relative;
-  width: 220px; /* Set a fixed width for each competitive programming div */
-  height: 100px; /* Adjust height as needed */
-  background: rgb(190, 62, 184);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 25px;
-  font-weight: bold;
-  border-radius: 15px;
-  cursor: pointer;
-  color: white; /* Ensure text is visible */
-  transition: background 0.3s; /* Add transition for hover effect */
-}
-
-.cp:hover {
-  background: rgb(150, 50, 150); /* Change background on hover */
-}
