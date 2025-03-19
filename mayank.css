@@ -1,24 +1,27 @@
 /* Positions Section */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .cards {
-    display: flex;
-    flex-direction: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin: auto;
-  }
-  
+  display: flex;
+  gap: 15px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
   .cards .red {
     background-color: #f43f5e;
-  }
-  
+  } 
   .cards .blue {
     background-color: #3b82f6;
   }
-  
   .cards .green {
     background-color: #22c55e;
-  }
-  
+  }  
   .cards .card {
     display: flex;
     align-items: center;
@@ -32,7 +35,6 @@
     cursor: pointer;
     transition: 400ms;
   }
-  
   .cards .card p.tip {
     font-size: 1em;
     font-weight: 700;
@@ -1305,4 +1307,59 @@ h2 {
 .form-container .form-submit-btn:hover {
   background-color: #fff;
   border-color: #fff;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  body {
+      font-size: 16px;
+  }
+
+  .container {
+      width: 90%;
+      margin: auto;
+  }
+
+  .header {
+      text-align: center;
+      padding: 20px;
+  }
+
+  .about-me, .skills, .projects, .positions, .contact {
+      padding: 20px;
+      text-align: center;
+  }
+
+  .contact-me {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .contact-me a {
+      display: block;
+      margin: 10px 0;
+  }
+
+  /* Adjust buttons */
+  .btn {
+      width: 100%;
+      padding: 10px;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  padding: 20px;
+  text-align: center;
 }
