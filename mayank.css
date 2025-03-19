@@ -525,7 +525,6 @@ h2 {
   width: 180px;
   height: 245px;
 }
-/* Projects Section */
 .projects-container {
   display: flex; /* Use flexbox to align items in a row */
   justify-content: center; /* Center the items horizontally */
@@ -536,18 +535,15 @@ h2 {
 
 .container {
   position: relative;
-  width: 220px; /* Set a fixed width for each project card */
+  width: 220px; 
   height: 320px;
   transition: 200ms;
 }
 
 .container:active {
-  width: 210px; /* Slightly reduce width on active */
-  height: 310px; /* Slightly reduce height on active */
+  width: 210px;
+  height: 310px;
 }
-
-/* Other existing styles for #card, .card-content, etc. remain unchanged */
-
 #card {
   position: absolute;
   inset: 0;
@@ -1025,36 +1021,6 @@ h2 {
   transform: rotateX(-20deg) rotateY(10deg) rotateZ(0deg);
 }
 
-.noselect {
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Old versions of Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  user-select: none;
-  /* Non-prefixed version, currently
-									supported by Chrome, Edge, Opera and Firefox */
-}
-
-.card-glare {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    125deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.05) 45%,
-    rgba(255, 255, 255, 0.1) 50%,
-    rgba(255, 255, 255, 0.05) 55%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  opacity: 0;
-  transition: opacity 300ms;
-}
-
 .cyber-lines span {
   position: absolute;
   background: linear-gradient(
@@ -1239,4 +1205,12 @@ h2 {
 }
 .cp:hover:after {
   content: "Click To See My Profile";
+}
+
+.cp-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
 }
