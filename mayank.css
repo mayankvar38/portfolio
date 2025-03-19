@@ -1,9 +1,10 @@
 /* Positions Section */
 .cards {
     display: flex;
-    flex-direction: row;
+    flex-direction: wrap;
+    justify-content: center;
     gap: 15px;
-    /* margin: auto; */
+    margin: auto;
   }
   
   .cards .red {
@@ -524,6 +525,28 @@ h2 {
   width: 180px;
   height: 245px;
 }
+/* Projects Section */
+.projects-container {
+  display: flex; /* Use flexbox to align items in a row */
+  justify-content: center; /* Center the items horizontally */
+  flex-wrap: nowrap; /* Prevent wrapping to the next line */
+  gap: 20px; /* Add some space between the project cards */
+  margin: 20px 0; /* Add margin for spacing */
+}
+
+.container {
+  position: relative;
+  width: 220px; /* Set a fixed width for each project card */
+  height: 320px;
+  transition: 200ms;
+}
+
+.container:active {
+  width: 210px; /* Slightly reduce width on active */
+  height: 310px; /* Slightly reduce height on active */
+}
+
+/* Other existing styles for #card, .card-content, etc. remain unchanged */
 
 #card {
   position: absolute;
@@ -1215,4 +1238,31 @@ h2 {
 }
 .cp:hover:after {
   content: "Click To See My Profile";
+}
+/* Competitive Programming Section */
+.cp-container {
+  display: flex; /* Use flexbox to align items in a row */
+  justify-content: center; /* Center the items horizontally */
+  gap: 20px; /* Add some space between the competitive programming divs */
+  margin: 20px 0; /* Add margin for spacing */
+}
+
+.cp {
+  position: relative;
+  width: 220px; /* Set a fixed width for each competitive programming div */
+  height: 100px; /* Adjust height as needed */
+  background: rgb(190, 62, 184);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  color: white; /* Ensure text is visible */
+  transition: background 0.3s; /* Add transition for hover effect */
+}
+
+.cp:hover {
+  background: rgb(150, 50, 150); /* Change background on hover */
 }
