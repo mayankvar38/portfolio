@@ -24,6 +24,33 @@
     <div id="home" class="home-section">
         <img src="mayank.jpeg" alt="Mayank Varshney" class="profile-photo">
         <h1 class="name-heading">Mayank Varshney</h1>
+        <div class="typewriter">
+            I am A <span id="typewriter-text"></span>
+        </div>
+        <script>
+            const words=["Full Stack Developer","Python Enthusiast","SQL Developer","DSA Enthusiast","Video Editor"];
+            let wordIndex=0,charIndex=0;
+            let isDeleting=false;
+            const speed=100;
+            function typeEffect(){
+                const textSpan=document.getElementById("typewriter-text");
+                const currentWord=words[wordIndex];
+                if(isDeleting){
+                    charIndex--;
+                }else{
+                    charIndex++;
+                }
+                textSpan.textContent = currentWord.substring(0,charIndex);
+                if (!isDeleting&&charIndex===currentWord.length) {
+                    setTimeout(()=>isDeleting=true,1000); // Pause before deleting
+                } else if(isDeleting&&charIndex===0) {
+                    isDeleting=false;
+                    wordIndex=(wordIndex+1)%words.length;
+                }
+                setTimeout(typeEffect,isDeleting?speed/2:speed);
+            }
+            document.addEventListener("DOMContentLoaded",()=>setTimeout(typeEffect,500));
+        </script>
         <p class="intro-text">Hello there, I am a pre-final year BCA student at Jaypee Institute Of Information Technology, Noida. I am primarily interested in Web Development and DBMS.</p>
 
         <div class="social-buttons">
