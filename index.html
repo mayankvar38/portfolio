@@ -391,24 +391,44 @@
     </div>
 </div> 
 
-    <div><h1>Contact Me</h1></div>
-    <div class="form-container">
-      <form class="form">
+<div><h1>Contact Me</h1></div>
+<div class="form-container">
+    <form class="form" onsubmit="onSubmit(event)">
         <div class="form-group">
-          <label for="email">Your Email</label>
-          <input type="text" id="email" name="email" required="">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
         </div>
         <div class="form-group">
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject" required="">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
         </div>
         <div class="form-group">
-          <label for="textarea">How Can I Help You?</label>
-          <textarea name="textarea" id="textarea" rows="10" cols="50" required=""></textarea>
+            <label for="textarea">How Can I Help You?</label>
+            <textarea name="message" id="textarea" rows="10" cols="50" required></textarea>
         </div>
         <button class="form-submit-btn" type="submit">SEND MESSAGE</button>
-      </form>
-    </div>
+    </form>
+</div>
+
+<script>
+    function onSubmit(event) {
+        event.preventDefault(); // Prevent default form submission
+        const form = event.target;
+        const email = document.getElementById("email").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("textarea").value;
+
+        // Create mailto URL
+        const mailtoUrl = `mailto:mayankvar63@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${email} \n\n${message}`)}`;
+
+        // Open default mail client
+        window.location.href = mailtoUrl;
+
+        alert("Opening mail client. Your message will open in your default email application.");
+
+        form.reset();
+    }
+</script>
     <script>
         document.querySelectorAll(".navbar a").forEach(anchor => {
             anchor.addEventListener("click", function(event) {
