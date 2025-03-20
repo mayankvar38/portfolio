@@ -5,7 +5,6 @@
   align-items: center;
   width: 100%;
 }
-
 .cards {
   display: flex;
   gap: 15px;
@@ -43,21 +42,17 @@
   .cards .card p.second-text {
     font-size: .7em;
   }
-  
   .cards .card:hover {
     transform: scale(1.1, 1.1);
   }
-  
   .cards:hover > .card:not(:hover) {
     filter: blur(10px);
     transform: scale(0.9, 0.9);
   }
-
 /* Resume button*/
 .voltage-button {
     position: relative;
   }
-  
   .voltage-button button {
     color: white;
     background: #0D1127;
@@ -69,16 +64,13 @@
     letter-spacing: 0.075em;
     transition: background 0.3s;
   }
-  
   .voltage-button button:hover {
     cursor: pointer;
     background: #0F1C53;
   }
-  
   .voltage-button button:hover + svg, .voltage-button button:hover + svg + .dots {
     opacity: 1;
   }
-  
   .voltage-button svg {
     display: block;
     position: absolute;
@@ -91,30 +83,25 @@
     transition: opacity 0.4s;
     transition-delay: 0.1s;
   }
-  
   .voltage-button svg path {
     stroke-dasharray: 100;
     filter: url("#glow");
-  }
-  
+  } 
   .voltage-button svg path.line-1 {
     stroke: #f6de8d;
     stroke-dashoffset: 0;
     animation: spark-1 3s linear infinite;
   }
-  
   .voltage-button svg path.line-2 {
     stroke: #6bfeff;
     stroke-dashoffset: 500;
     animation: spark-2 3s linear infinite;
   }
-  
   .voltage-button .dots {
     opacity: 0;
     transition: opacity 0.3s;
     transition-delay: 0.4s;
   }
-  
   .voltage-button .dots .dot {
     width: 1rem;
     height: 1rem;
@@ -123,88 +110,73 @@
     position: absolute;
     opacity: 0;
   }
-  
   .voltage-button .dots .dot-1 {
     top: 0;
     left: 20%;
     animation: fly-up 3s linear infinite;
   }
-  
   .voltage-button .dots .dot-2 {
     top: 0;
     left: 55%;
     animation: fly-up 3s linear infinite;
     animation-delay: 0.5s;
   }
-  
   .voltage-button .dots .dot-3 {
     top: 0;
     left: 80%;
     animation: fly-up 3s linear infinite;
     animation-delay: 1s;
   }
-  
   .voltage-button .dots .dot-4 {
     bottom: 0;
     left: 30%;
     animation: fly-down 3s linear infinite;
     animation-delay: 2.5s;
   }
-  
   .voltage-button .dots .dot-5 {
     bottom: 0;
     left: 65%;
     animation: fly-down 3s linear infinite;
     animation-delay: 1.5s;
   }
-  
   @keyframes spark-1 {
     to {
       stroke-dashoffset: -1000;
     }
   }
-  
   @keyframes spark-2 {
     to {
       stroke-dashoffset: -500;
     }
   }
-  
   @keyframes fly-up {
     0% {
       opacity: 0;
       transform: translateY(0) scale(0.2);
     }
-  
     5% {
       opacity: 1;
       transform: translateY(-1.5rem) scale(0.4);
     }
-  
     10%, 100% {
       opacity: 0;
       transform: translateY(-3rem) scale(0.2);
     }
   }
-  
   @keyframes fly-down {
     0% {
       opacity: 0;
       transform: translateY(0) scale(0.2);
     }
-  
     5% {
       opacity: 1;
       transform: translateY(1.5rem) scale(0.4);
     }
-  
     10%, 100% {
       opacity: 0;
       transform: translateY(3rem) scale(0.2);
     }
   }
-  
-
 * {
     margin: 0;
     padding: 0;
@@ -233,12 +205,9 @@ body {
     z-index: -1;
 }
 h1, h2 {
-    color: white !important;
+    color: white;
     text-align: center;
 }
-
-
-/* ✅ Updated Navbar */
 .navbar {
     position: fixed;
     top: 10px;
@@ -251,8 +220,6 @@ h1, h2 {
     z-index: 100;
     transition: all 0.3s ease-in-out;
 }
-
-/* Reflection Effect */
 .navbar::after {
     content: '';
     position: absolute;
@@ -265,8 +232,6 @@ h1, h2 {
     opacity: 0.5;
     filter: blur(8px);
 }
-
-/* Navbar List */
 .navbar ul {
     list-style: none;
     display: flex;
@@ -274,48 +239,6 @@ h1, h2 {
     padding: 0;
     align-items: center;
 }
-
-/* Navbar Links */
-/* ✅ Updated Responsive Navbar */
-.navbar {
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(147, 58, 138, 0.7);
-    border-radius: 10px;
-    padding: 15px 25px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 100;
-    transition: all 0.3s ease-in-out;
-    display: flex;
-    justify-content: center; /* ✅ Centers the content */
-    align-items: center;
-}
-
-/* ✅ Reflection Effect */
-.navbar::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    height: 100%;
-    background: rgba(255, 182, 193, 0.2);
-    transform: scaleY(-1);
-    opacity: 0.5;
-    filter: blur(8px);
-}
-
-/* ✅ Navbar List */
-.navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    padding: 0;
-    align-items: center;
-}
-
 /* ✅ Navbar Links */
 .navbar a {
     text-decoration: none;
@@ -323,7 +246,6 @@ h1, h2 {
     font-weight: bold;
     transition: color 0.3s;
 }
-
 .navbar a:hover {
     color: grey;
 }
@@ -404,7 +326,6 @@ h1, h2 {
     max-width: 80%;
     margin: auto;
 }
-
 /* Social Buttons */
 .social-buttons {
     display: flex;
@@ -419,7 +340,6 @@ h1, h2 {
     border-radius: 50%;
     object-fit: cover;
 }
-
 /* Resume Button */
 .resume-button {
     position: fixed;
@@ -431,19 +351,16 @@ h1, h2 {
     color: white;
     background-color: transparent;
 }
-
 .resume-image {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-right: 10px;
 }
-
 .resume-text {
     font-size: 16px;
     font-weight: bold;
 }
-
 /* Container and Sections */
 .container {
     display: flex;
@@ -457,7 +374,6 @@ h1, h2 {
 .section {
     margin-bottom: 100px;
 }
-
 /* Skills Section */
 .skills, .tools {
     display: flex;
@@ -465,7 +381,6 @@ h1, h2 {
     justify-content: center;
     gap: 20px;
 }
-
 .skill, .tool {
     background: rgba(248, 5, 223, 0.5);
     padding: 20px;
@@ -475,39 +390,32 @@ h1, h2 {
     gap: 10px;
     transition: background 0.3s, transform 0.3s;
 }
-
 .skill:hover, .tool:hover {
     background: rgba(251, 249, 249, 0.5);
     box-shadow: 0 8px 20px rgba(241, 235, 236, 0.6);
     transform: scale(1.05) translateY(-10px);
     backdrop-filter: blur(8px);
 }
-
 .skill img, .tool img {
     width: 60px;
     height: 40px;
     transition: transform 0.3s;
 }
-
 .skill:hover img, .tool:hover img {
     transform: scale(1.2) rotateY(360deg);
 }
-
 .skill span, .tool span {
     font-size: 1.2rem;
     color: white;
 }
-/* Add a gap between h1 and h2 */
 h1 {
-    margin-bottom: 30px; /* Adjust as needed */
+    margin-bottom: 60px; 
+    margin-top: 60px;
 }
-
-/* Add a gap between h2 and skill divs */
 h2 {
-    margin-top: 20px; /* Adjust as needed */
+    margin-top: 20px;
+    margin-bottom: 40px; 
 }
-
-/* Add margin to divs in the skills section for consistent spacing */
 .skills, .tools {
     display: flex;
     flex-wrap: wrap;
@@ -780,7 +688,6 @@ h2 {
   content: "";
   opacity: 80%;
 }
-
 .canvas {
   perspective: 800px;
   inset: 0;
@@ -792,10 +699,7 @@ h2 {
   gap: 0px 0px;
   grid-template-areas:
     "tr-1 tr-2 tr-3 tr-4 tr-5"
-    "tr-6 tr-7 tr-8 tr-9 tr-10"
-    "tr-11 tr-12 tr-13 tr-14 tr-15"
-    "tr-16 tr-17 tr-18 tr-19 tr-20"
-    "tr-21 tr-22 tr-23 tr-24 tr-25";
+    "tr-6 tr-7 tr-8 tr-9 tr-10";
 }
 
 .tr-1 {
@@ -837,92 +741,26 @@ h2 {
 .tr-10 {
   grid-area: tr-10;
 }
-
-.tr-11 {
-  grid-area: tr-11;
-}
-
-.tr-12 {
-  grid-area: tr-12;
-}
-
-.tr-13 {
-  grid-area: tr-13;
-}
-
-.tr-14 {
-  grid-area: tr-14;
-}
-
-.tr-15 {
-  grid-area: tr-15;
-}
-
-.tr-16 {
-  grid-area: tr-16;
-}
-
-.tr-17 {
-  grid-area: tr-17;
-}
-
-.tr-18 {
-  grid-area: tr-18;
-}
-
-.tr-19 {
-  grid-area: tr-19;
-}
-
-.tr-20 {
-  grid-area: tr-20;
-}
-
-.tr-21 {
-  grid-area: tr-21;
-}
-
-.tr-22 {
-  grid-area: tr-22;
-}
-
-.tr-23 {
-  grid-area: tr-23;
-}
-
-.tr-24 {
-  grid-area: tr-24;
-}
-
-.tr-25 {
-  grid-area: tr-25;
-}
-
 .tr-1:hover ~ #card {
   transition: 125ms ease-in-out;
   transform: rotateX(20deg) rotateY(-10deg) rotateZ(0deg);
 }
-
 .tr-2:hover ~ #card {
   transition: 125ms ease-in-out;
   transform: rotateX(20deg) rotateY(-5deg) rotateZ(0deg);
 }
-
 .tr-3:hover ~ #card {
   transition: 125ms ease-in-out;
   transform: rotateX(20deg) rotateY(0deg) rotateZ(0deg);
 }
-
 .tr-4:hover ~ #card {
   transition: 125ms ease-in-out;
   transform: rotateX(20deg) rotateY(5deg) rotateZ(0deg);
 }
-
 .tr-5:hover ~ #card {
   transition: 125ms ease-in-out;
   transform: rotateX(20deg) rotateY(10deg) rotateZ(0deg);
 }
-
 .tr-6:hover ~ #card {
   transition: 125ms ease-in-out;
   transform: rotateX(10deg) rotateY(-10deg) rotateZ(0deg);
@@ -932,97 +770,18 @@ h2 {
   transition: 125ms ease-in-out;
   transform: rotateX(10deg) rotateY(-5deg) rotateZ(0deg);
 }
-
 .tr-8:hover ~ #card {
   transition: 125ms ease-in-out;
   transform: rotateX(10deg) rotateY(0deg) rotateZ(0deg);
 }
-
 .tr-9:hover ~ #card {
   transition: 125ms ease-in-out;
   transform: rotateX(10deg) rotateY(5deg) rotateZ(0deg);
 }
-
 .tr-10:hover ~ #card {
   transition: 125ms ease-in-out;
   transform: rotateX(10deg) rotateY(10deg) rotateZ(0deg);
 }
-
-.tr-11:hover ~ #card {
-  transition: 125ms ease-in-out;
-  transform: rotateX(0deg) rotateY(-10deg) rotateZ(0deg);
-}
-
-.tr-12:hover ~ #card {
-  transition: 125ms ease-in-out;
-  transform: rotateX(0deg) rotateY(-5deg) rotateZ(0deg);
-}
-
-.tr-13:hover ~ #card {
-  transition: 125ms ease-in-out;
-  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-
-.tr-14:hover ~ #card {
-  transition: 125ms ease-in-out;
-  transform: rotateX(0deg) rotateY(5deg) rotateZ(0deg);
-}
-
-.tr-15:hover ~ #card {
-  transition: 125ms ease-in-out;
-  transform: rotateX(0deg) rotateY(10deg) rotateZ(0deg);
-}
-
-.tr-16:hover ~ #card {
-  transition: 125ms ease-in-out;
-  transform: rotateX(-10deg) rotateY(-10deg) rotateZ(0deg);
-}
-
-.tr-17:hover ~ #card {
-  transition: 125ms ease-in-out;
-  transform: rotateX(-10deg) rotateY(-5deg) rotateZ(0deg);
-}
-
-.tr-18:hover ~ #card {
-  transition: 125ms ease-in-out;
-  transform: rotateX(-10deg) rotateY(0deg) rotateZ(0deg);
-}
-
-.tr-19:hover ~ #card {
-  transition: 125ms ease-in-out;
-  transform: rotateX(-10deg) rotateY(5deg) rotateZ(0deg);
-}
-
-.tr-20:hover ~ #card {
-  transition: 125ms ease-in-out;
-  transform: rotateX(-10deg) rotateY(10deg) rotateZ(0deg);
-}
-
-.tr-21:hover ~ #card {
-  transition: 125ms ease-in-out;
-  transform: rotateX(-20deg) rotateY(-10deg) rotateZ(0deg);
-}
-
-.tr-22:hover ~ #card {
-  transition: 125ms ease-in-out;
-  transform: rotateX(-20deg) rotateY(-5deg) rotateZ(0deg);
-}
-
-.tr-23:hover ~ #card {
-  transition: 125ms ease-in-out;
-  transform: rotateX(-20deg) rotateY(0deg) rotateZ(0deg);
-}
-
-.tr-24:hover ~ #card {
-  transition: 125ms ease-in-out;
-  transform: rotateX(-20deg) rotateY(5deg) rotateZ(0deg);
-}
-
-.tr-25:hover ~ #card {
-  transition: 125ms ease-in-out;
-  transform: rotateX(-20deg) rotateY(10deg) rotateZ(0deg);
-}
-
 .cyber-lines span {
   position: absolute;
   background: linear-gradient(
@@ -1185,19 +944,16 @@ h2 {
   color: white;
   transition: all 0.5s;
 }
-
 .cp::before {
   top: 0;
   right: 0;
   border-radius: 0 15px 0 100%;
 }
-
 .cp::after {
   bottom: 0;
   left: 0;
   border-radius: 0 100%  0 15px;
 }
-
 .cp:hover::before,
 .cp:hover:after {
   width: 100%;
@@ -1208,7 +964,6 @@ h2 {
 .cp:hover:after {
   content: "Click To See My Profile";
 }
-
 .cp-container{
   display: flex;
   justify-content: center;
@@ -1216,12 +971,11 @@ h2 {
   gap: 150px;
   padding: 30px;
 }
-
 /*Contact form*/
 .form-container {
-  width: 600px; /* Set a fixed width for the container */
-  max-width: 100%; /* Ensure it doesn't overflow on smaller screens */
-  height: auto; /* Allow height to adjust based on content */
+  width: 600px; 
+  max-width: 100%; 
+  height: auto; 
   background: linear-gradient(#212121, #212121) padding-box,
               linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
   border: 2px solid transparent;
@@ -1231,18 +985,17 @@ h2 {
   color: white;
   border-radius: 16px;
   box-sizing: border-box;
-  display: flex; /* Use flexbox */
-  flex-direction: column; /* Stack children vertically */
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
-  margin: auto; /* Center the container itself */
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  margin: auto; 
 }
-
 .form-container .form {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 100%; /* Ensure the form takes full width */
+  width: 100%; 
 }
 
 .form-container .form-group {
@@ -1279,13 +1032,11 @@ h2 {
 .form-container .form-group input::placeholder {
   opacity: 0.5;
 }
-
 .form-container .form-group input:focus,
 .form-container .form-group textarea:focus {
   outline: none;
   border-color: #e81cff;
 }
-
 .form-container .form-submit-btn {
   display: flex;
   align-items: center;
@@ -1303,7 +1054,6 @@ h2 {
   cursor: pointer;
   border-radius: 6px;
 }
-
 .form-container .form-submit-btn:hover {
   background-color: #fff;
   border-color: #fff;
@@ -1320,7 +1070,6 @@ h2 {
   display: inline-block;
   animation: blinkCursor 0.8s steps(2) infinite;
 }
-
 @keyframes blinkCursor {
   50% { border-color: transparent; }
 }
