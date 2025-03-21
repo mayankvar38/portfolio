@@ -1067,10 +1067,10 @@ h2 {
 .typewriter {
   font-weight: 600;
   font-size: 40px;
-  color: #aebedf;
+  color: #bba3ae;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid #aebedf;
+  border-right: 2px solid #bba3ae;
   width: fit-content;
   display: inline-block;
   animation: blinkCursor 0.8s steps(2) infinite;
